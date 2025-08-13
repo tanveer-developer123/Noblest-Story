@@ -17,7 +17,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Cards />
+      {/* <Cards /> */}
       <Being/>
       <Fresh_ins/>
       {/* Designing Part */}

@@ -1,36 +1,58 @@
-import "../style/Navbar.css"
-
 const Navbar = () => {
   return (
-
     <>
-      <div className="horizontal-line"></div>
-      <div className="top-bar">
+      <hr className="bg-[#ccc]" />
+
+      <div className="flex justify-between px-5 py-2 text-sm text-gray-800 font-[Jost,'MADE Mirage',serif]">
         <div className="top-left">Partly Cloud 38°C</div>
         <div className="top-right">July 31, 2025</div>
       </div>
 
-      {/* Divider */}
-      <div className="horizontal-line"></div>
+      <hr className="bg-[#ccc]" />
 
       {/* Navigation */}
-      <header className="navbar">
-        <div className="logo">
-          <img src="" alt="" />
-          </div>
-        <nav className="nav-links">
-          <a href="#">Meditation</a>
-          <a href="#">ANXIETY</a>
-          <a href="#">Well-being</a>
+      <header className="flex justify-between items-center p-[0.9375rem] px-5 flex-wrap bg-white font-[Jost,'MADE Mirage',serif]">
+        {/* Logo */}
+        <div className="font-bold tracking-[0.0625rem]">
+          <img src="/logo.png" alt="" />
+        </div>
+
+        {/* Nav Links */}
+        <nav className="flex gap-5 flex-wrap">
+          <a
+            href="#"
+            className="no-underline text-black text-sm uppercase"
+          >
+            Meditation
+          </a>
+          <a
+            href="#"
+            className="no-underline text-black text-sm uppercase"
+          >
+            ANXIETY
+          </a>
+          <a
+            href="#"
+            className="no-underline text-black text-sm uppercase"
+          >
+            Well-being
+          </a>
         </nav>
-        <div className="nav-cta">
-          <a href="#">Mentorship for Influencers</a>
+
+        {/* CTA */}
+        <div>
+          <a
+            href="#"
+            className="no-underline text-black text-sm uppercase border-b border-black"
+          >
+            Mentorship for Influencers
+          </a>
         </div>
       </header>
 
-      <div className="horizontal-line"></div>
+      <hr className="bg-[#ccc]" />
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
