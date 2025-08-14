@@ -21,7 +21,7 @@ const Being = () => {
           <img
             src="/pic 7.png"
             alt="Well-being activity"
-            className="w-full h-auto object-cover rounded shadow"
+            className="w-full h-auto object-cover "
           />
         </div>
 

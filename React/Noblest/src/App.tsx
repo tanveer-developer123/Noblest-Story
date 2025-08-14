@@ -17,10 +17,10 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      {/* <Cards /> */}
+      <Cards />
       <Being/>
-      <Fresh_ins/>
       {/* Designing Part */}
+      <Fresh_ins/>
       <Connect/>
       <How_work/>
       <Faqs/>

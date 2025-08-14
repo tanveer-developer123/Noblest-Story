@@ -47,11 +47,11 @@ const Connect = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 400, // fast animation
+      duration: 400,
       easing: "ease-out",
     });
     AOS.refresh();
-  }, [currentIndex]); // har slide change par animation refresh hoga
+  }, [currentIndex]);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % quotes.length);
@@ -62,87 +62,104 @@ const Connect = () => {
   };
 
   return (
-    <>
-      <div>
-        {/* Gray line */}
-        <div className="gray-line"></div>
-
-        {/* Connect Row */}
-        <div className="connect-row">
-          <div className="connect-left">
-            <div className="connect-small-heading">The heart of our mission</div>
-            <span className="connect-title">CONNECT</span>
+    <div className=" mx-auto">
+      {/* Gray Line */}
+      <hr className="my-6" />
+      {/* Connect Row */}
+      <div className="flex px-12 flex-col md:flex-row justify-between items-center gap-4 mb-8">
+        <div className="text-center md:text-left">
+          <div className="text-sm tracking-wider uppercase text-gray-500">
+            The heart of our mission
           </div>
-          <span className="connect-icons">
-            <FaInstagram className="light-icon" />
-            <FaXTwitter className="light-icon" />
-            <FaFacebook />
-            <FaDribbble />
-            <FaLinkedin />
-            <FaReddit />
-            <FaPinterest />
-          </span>
+          <span className="text-3xl font-bold text-gray-900">CONNECT</span>
         </div>
+        <div className="flex gap-4 text-gray-600 text-xl cursor-pointer">
+          <a href="">
+            <FaInstagram className="hover:text-black transition" />
 
-        {/* Quote Slider */}
-        <div className="quote-section">
-          <div className="arrow left" onClick={prevSlide}>
-            &#10094;
-          </div>
+          </a>
+          <a href="">
+            <FaXTwitter className="hover:text-black transition" />
 
-          <div id="quote-container">
-            <div
-              className="quote-slide active"
-              data-aos="fade-up" // niche se upar
-              key={currentIndex} // force re-render on change
-            >
-              <div className="quote-text">
-                {quotes[currentIndex].text.split("\n").map((line, idx) => (
-                  <div key={idx}>{line}</div>
-                ))}
-              </div>
-              <div className="quote-author">{quotes[currentIndex].author}</div>
-            </div>
-          </div>
+          </a>
+          <a href="">
+            <FaFacebook className="hover:text-black transition" />
 
-          <div className="arrow right" onClick={nextSlide}>
-            &#10095;
-          </div>
-        </div>
+          </a>
+          <a href="">
+            <FaReddit className="hover:text-black transition" />
 
-        {/* Who Section */}
-        <div className="who-section">
-          <div className="who-left">
-            <div
-              style={{
-                fontSize: "14px",
-                letterSpacing: "1px",
-                marginBottom: "8px",
-                fontFamily: "jost",
-              }}
-            >
-              THE HEART OF OUR MISSION
-            </div>
-            <div className="who-title">WHO WE'RE</div>
-          </div>
-          <div className="who-right">
-            We are dedicated to fostering growth in all aspects of life.
-            <br />
-            Through personal development, we encourage continuous
-            <br />
-            learning and improvement. We emphasize the importance of
-            <br />
-            health, both physical and mental, and promote inner peace
-            <br />
-            through spirituality. Building strong, supportive relationships
-            <br />
-            with empathy and trust is central to our approach, alongside
-            <br />
-            wise financial management for future stability.
-          </div>
+          </a>
+          <a href="">
+            <FaLinkedin className="hover:text-black transition" />
+
+          </a>
+          <a href="">
+            <FaDribbble className="hover:text-black transition" />
+
+          </a>
+          <a href="">
+            <FaPinterest className="hover:text-black transition" />
+
+          </a>
         </div>
       </div>
-    </>
+
+      {/* Quote Slider */}
+      <div className="flex items-center justify-between px-4 bg-black gap-4 mb-10 py-16">
+        <button
+          onClick={prevSlide}
+          className="text-2xl text-white hover:text-white"
+        >
+          &#10094;
+        </button>
+
+        <div
+          data-aos="fade-up"
+          key={currentIndex}
+          className="max-w-2xl text-center"
+        >
+          <div className="text-2xl  text-white mb-4 whitespace-pre-line">
+            {quotes[currentIndex].text}
+          </div>
+          <div className="text-sm uppercase tracking-wider text-gray-300">
+            {quotes[currentIndex].author}
+          </div>
+        </div>
+
+        <button
+          onClick={nextSlide}
+          className="text-2xl text-white hover:text-white"
+        >
+          &#10095;
+        </button>
+      </div>
+
+
+      {/* Who Section */}
+      <div className="flex px-[180px] flex-col md:flex-row items-start py-16 md:gap-20">
+        {/* Left Column */}
+        <div className="flex-1 md:max-w-xs">
+          <div className="text-sm tracking-widest mb-3 text-gray-500 uppercase">
+            THE HEART OF OUR MISSION
+          </div>
+          <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            WHO WE'RE
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="flex-1 text-lg text-gray-600 leading-relaxed">
+          We are dedicated to fostering growth in all aspects of life. Through
+          personal development, we encourage continuous learning and improvement.
+          We emphasize the importance of health, both physical and mental, and
+          promote inner peace through spirituality. Building strong, supportive
+          relationships with empathy and trust is central to our approach, alongside
+          wise financial management for future stability.
+        </div>
+      </div>
+
+    </div>
   );
 };
 

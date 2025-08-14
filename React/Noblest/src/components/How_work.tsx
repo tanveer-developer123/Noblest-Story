@@ -1,129 +1,96 @@
 const How_work = () => {
   return (
     <>
-      <div className="head">
-        <h1>THIS IS ALL YOU NEED</h1>
-        <span>Exactly What You Need</span>
+      {/* Header */}
+      <div className="text-center mt-10">
+        <h1 className="text-3xl font-bold uppercase">THIS IS ALL YOU NEED</h1>
+        <span className="text-gray-500">Exactly What You Need</span>
       </div>
 
-      {/* <!-- section image  --> */}
-      <div className="three-column-section">
-        <div className="column column1">
-          <div className="column-text">BLOGS</div>
+      {/* 3 Column Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-10">
+        <div className="bg-gray-200 h-60 flex items-center justify-center text-xl font-semibold">
+          BLOGS
         </div>
-        <div className="column column2">
-          <div className="column-text">OUR BEST<br/>NEWSLETTER</div>
+        <div className="bg-gray-300 h-60 flex items-center justify-center text-xl font-semibold text-center">
+          OUR BEST <br /> NEWSLETTER
         </div>
-        <div className="column column3">
-          <div className="column-text">ARTICLES</div>
+        <div className="bg-gray-200 h-60 flex items-center justify-center text-xl font-semibold">
+          ARTICLES
         </div>
       </div>
 
-      <div className="head-tilti">
-        <h1>HOW IT WORKS</h1>
-        <span>Exactly What You Need</span>
+      {/* Second Header */}
+      <div className="text-center mt-10">
+        <h1 className="text-3xl font-bold uppercase">HOW IT WORKS</h1>
+        <span className="text-gray-500">Exactly What You Need</span>
       </div>
 
-      <div className="personal-growth-container">
-        <div className="growth-layout">
-          {/* <!-- Top Section - Personal Development Areas --> */}
-          <div className="growth-grid">
-            <div className="growth-item">
-              <div className="number-box">
-                <span className="number-label">01</span>
-                <div className="arrow-line"></div>
+      {/* Growth Items */}
+      <div className="max-w-6xl mx-auto px-4 mt-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { num: "01", title: "Personal Development", text: "Strive to grow and improve daily." },
+            { num: "02", title: "Health", text: "Focus on exercise, and mental health." },
+            { num: "03", title: "Relationship", text: "Foster supportive connections with empathy and trust." },
+            { num: "04", title: "Finance", text: "Manage money wisely for future stability." },
+            { num: "05", title: "Spirituality", text: "Seek inner peace and purpose through mindfulness." },
+          ].map((item, index) => (
+            <div key={index} className="flex items-start space-x-4">
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold">{item.num}</span>
+                <div className="w-px h-10 bg-gray-400 mt-1"></div>
               </div>
-              <div className="text-area">
-                <h3>Personal Development</h3>
-                <p>Strive to grow and improve daily.</p>
-              </div>
-            </div>
-
-            <div className="growth-item">
-              <div className="number-box">
-                <span className="number-label">02</span>
-                <div className="arrow-line"></div>
-              </div>
-              <div className="text-area">
-                <h3>Health</h3>
-                <p>Focus on exercise, and mental health.</p>
+              <div>
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-gray-600">{item.text}</p>
               </div>
             </div>
+          ))}
+        </div>
 
-            <div className="growth-item">
-              <div className="number-box">
-                <span className="number-label">03</span>
-                <div className="arrow-line"></div>
-              </div>
-              <div className="text-area">
-                <h3>Relationship</h3>
-                <p>Foster supportive connections with empathy and trust.</p>
+        {/* FAQ Section */}
+        <div className="mt-16">
+          <div className="text-center mb-10">
+            <div className="uppercase text-sm text-gray-500">All the Answers Without the Drama</div>
+            <h2 className="text-3xl font-bold leading-tight">
+              Commonly <br /> Asked <br /> Questions
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="border p-4 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <div className="font-semibold">How do I start meditating?</div>
+            </div>
+            <div className="border p-4 rounded-lg">
+              <div className="font-semibold">WHAT IS WELL-BEING?</div>
+              <div className="text-gray-600">
+                Well-being encompasses overall health, happiness, and life satisfaction.
               </div>
             </div>
-
-            <div className="growth-item">
-              <div className="number-box">
-                <span className="number-label">04</span>
-                <div className="arrow-line"></div>
-              </div>
-              <div className="text-area">
-                <h3>Finance</h3>
-                <p>Manage money wisely for future stability.</p>
+            <div className="border p-4 rounded-lg">
+              <div className="font-semibold">HOW CAN I BOOST MY CREATIVITY?</div>
+              <div className="text-gray-600">
+                Try new experiences, explore hobbies, stay curious, and allow time for relaxation.
               </div>
             </div>
-
-            <div className="growth-item">
-              <div className="number-box">
-                <span className="number-label">05</span>
-                <div className="arrow-line"></div>
+            <div className="border p-4 rounded-lg">
+              <div className="font-semibold">WHAT ARE COMMON SOURCES OF MOTIVATION?</div>
+              <div className="text-gray-600">
+                Sources include personal goals, rewards, support from others, and a sense of purpose.
               </div>
-              <div className="text-area">
-                <h3>Spirituality</h3>
-                <p>Seek inner peace and purpose through mindfulness.</p>
+            </div>
+            <div className="border p-4 rounded-lg">
+              <div className="font-semibold">HOW CAN I PRACTICE GRATITUDE DAILY?</div>
+              <div className="text-gray-600">
+                Keep a gratitude journal, express thanks to others, and reflect on positive aspects of your life.
               </div>
             </div>
           </div>
-
-          {/* <!-- Bottom Section - FAQ --> */}
-          <div className="questions-section">
-            <div className="questions-header">
-              <div className="questions-subtitle">All the Answers Without the Drama</div>
-              <h2 className="questions-title">Commonly <br/> Asked <br/> Questions</h2>
-              </div>
-
-                <div className="questions-list">
-                  <div className="question-item">
-                    <div className="question-text">How do I start meditating?</div>
-                  </div>
-
-                  <div className="question-item">
-                    <div className="question-text">WHAT IS WELL-BEING?</div>
-                    <div className="answer-text">Well-being encompasses overall health, happiness, and life satisfaction.</div>
-                  </div>
-
-                  <div className="question-item">
-                    <div className="question-text">HOW CAN I BOOST MY CREATIVITY?</div>
-                    <div className="answer-text">Try new experiences, explore hobbies, stay curious, and allow time for relaxation.
-                    </div>
-                  </div>
-
-                  <div className="question-item">
-                    <div className="question-text">WHAT ARE COMMON SOURCES OF MOTIVATION?</div>
-                    <div className="answer-text">Sources include personal goals, rewards, support from others, and a sense of
-                      purpose.</div>
-                  </div>
-
-                  <div className="question-item">
-                    <div className="question-text">HOW CAN I PRACTICE GRATITUDE DAILY?</div>
-                    <div className="answer-text">Keep a gratitude journal, express thanks to others, and reflect on positive aspects
-                      of your life.</div>
-                  </div>
-                </div>
-            </div>
-          </div>
         </div>
-      </>
-      )
-}
+      </div>
+    </>
+  );
+};
 
-      export default How_work
+export default How_work;
