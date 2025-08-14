@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="h-px bg-[#aaa] my-[10px] mb-[30px] w-full"></div>
 
       {/* Bottom Text */}
-      <p className="font-['Jost'] text-[17px] text-[#666] mt-[15px]">
+      <p className="font-['Jost'] text-[17px] text-[#666] my-[18px]">
         2025 © YourSite Name – Powered by YourBrand
       </p>
     </footer>

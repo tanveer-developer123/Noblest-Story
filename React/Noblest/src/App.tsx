@@ -1,32 +1,11 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Cards from './components/Cards'
-import Footer from './components/Footer'
-// import About from './pages/About'
-import Contact from './pages/Contact'
-import Hero from './pages/Hero'
-import Being from './components/Being'
-import Fresh_ins from './components/Fresh_ins'
-import Connect from './components/Connect'
-import How_work from './components/How_work'
-import Faqs from './components/Faqs'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Cards />
-      <Being/>
-      {/* Designing Part */}
-      <Fresh_ins/>
-      <Connect/>
-      <How_work/>
-      <Faqs/>
-      <Contact />
-      <Footer />
-
+      <Home />
     </>
   )
 }

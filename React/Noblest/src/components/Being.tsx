@@ -51,13 +51,13 @@ const Being = () => {
             READ ON
           </a>
         </div>
-        
+
       </section>
       <section className="py-10">
 
-      <div className="w-full border-t border-gray-300 mb-4"></div>
-      <h1 className="text-4xl font-extrabold text-gray-300 text-center">TRANSFORM. THRIVE. DISCOVER. TRANSFORM.</h1>
-      <div className="w-full border-b border-gray-300 mt-4"></div>
+        <hr className="my-10" />
+        <h1 className="text-4xl text-gray-400 text-center">TRANSFORM. THRIVE. DISCOVER. TRANSFORM.</h1>
+        <hr className="my-10" />
       </section>
     </div>
   );
