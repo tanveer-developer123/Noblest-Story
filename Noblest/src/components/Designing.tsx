@@ -1,95 +1,52 @@
-const Designing = () => {
-    return (
-        <>
-<div className="abb-line text-center my-5">
-  <h2 className="text-4xl md:text-4xl leading-snug">
-    Embrace these five principles <br /> to create a beautiful life
-  </h2>
-</div>
+import React from "react";
 
+import img1 from "../../public/Vector 1.png";
+import img2 from "../../public/Vector 2.png";
+import img3 from "../../public/Vector 3.png";
+import img4 from "../../public/Vector 4.png";
+import img5 from "../../public/Vector 5.png";
 
-<div className="w-full py-10 bg-white">
-      <div className="max-w-6xl mx-auto px-4 space-y-12">
+const Designing: React.FC = () => {
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-white">
+      <div className="relative w-[700px] h-[400px]">
+        {/* 1 - Vertical bar */}
+        <img
+          src={img1}
+          alt="vector 1"
+          className="h-[480px] absolute left-0 top-0 w-auto"
+        />
 
-        {/* PERSONAL DEV - Left */}
-        <div className="flex items-center gap-6">
-          <div className="w-16"></div>
-          <div className="w-40 flex-shrink-0">
-            <img src="/vector 1.png" alt="" className="w-full" />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold">PERSONAL DEV</h3>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex nulla, commodo id pulvinar vitae, tempus a
-              massa. Nullam id dolor eget dolor laoreet cursus. Donec eu nulla at lorem porta aliquet.
-            </p>
-          </div>
-        </div>
+        {/* 2 - Diagonal */}
+        <img
+          src={img2}
+          alt="vector 2"
+          className="absolute left-[120px] top-[120px] h-full w-auto"
+        />
 
-        {/* HEALTH - Right */}
-        <div className="flex items-center gap-6 flex-row-reverse">
-          <div className="w-16"></div>
-          <div className="w-40 flex-shrink-0">
-            <img src="/vector 2.png" alt="" className="w-full" />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold">HEALTH</h3>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex nulla, commodo id pulvinar vitae, tempus a
-              massa. Nullam id dolor eget dolor laoreet cursus. Donec eu nulla at lorem porta aliquet.
-            </p>
-          </div>
-        </div>
+        {/* 3 - Middle rectangle */}
+        <img
+          src={img3}
+          alt="vector 3"
+          className="absolute left-[320px] bottom-10 h-full w-auto"
+        />
 
-        {/* SPIRITUALITY - Left */}
-        <div className="flex items-center gap-6">
-          <div className="w-16"></div>
-          <div className="w-40 flex-shrink-0">
-            <img src="/Vector 3.png" alt="" className="w-full" />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold">SPIRITUALITY</h3>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex nulla, commodo id pulvinar vitae, tempus a
-              massa. Nullam id dolor eget dolor laoreet cursus. Donec eu nulla at lorem porta aliquet.
-            </p>
-          </div>
-        </div>
+        {/* 4 - Top half circle */}
+        <img
+          src={img4}
+          alt="vector 4"
+          className="absolute left-[480px] top-[-40px] h-[250px] w-auto"
+        />
 
-        {/* RELATIONSHIP - Right */}
-        <div className="flex items-center gap-6 flex-row-reverse">
-          <div className="w-16"></div>
-          <div className="w-40 flex-shrink-0">
-            <img src="/vector 4.png" alt="" className="w-full" />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold">RELATIONSHIP</h3>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex nulla, commodo id pulvinar vitae, tempus a
-              massa. Nullam id dolor eget dolor laoreet cursus. Donec eu nulla at lorem porta aliquet.
-            </p>
-          </div>
-        </div>
-
-        {/* FINANCE - Left */}
-        <div className="flex items-center gap-6">
-          <div className="w-16"></div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold">FINANCE</h3>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex nulla, commodo id pulvinar vitae, tempus a
-              massa. Nullam id dolor eget dolor laoreet cursus. Donec eu nulla at lorem porta aliquet.
-            </p>
-          </div>
-          <div className="w-40 flex-shrink-0">
-            <img src="/vector 5.png" alt="" className="w-full" />
-          </div>
-        </div>
-
-      </div>
+        {/* 5 - Bottom half circle */}
+        <img
+          src={img5}
+          alt="vector 5"
+          className="absolute left-[480px] bottom-[-120px] h-[250px] w-auto"
+        />
+      </div> 
     </div>
-        </>
-    )
-}
+  );
+};
 
-export default Designing
+export default Designing;
